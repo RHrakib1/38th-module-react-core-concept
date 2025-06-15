@@ -82,6 +82,7 @@ function Institute() {
   return (
     <div style={cssStyle}>
       <h3>my clg name is a kpi</h3>
+      <h2>hu</h2>
       <p>this is a diploma students study place</p>
     </div>
   )
