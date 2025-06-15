@@ -1,12 +1,36 @@
 import { useState } from 'react'
+import Todo from './Todo';
+import Actors from './Actors';
+import Players from './Players';
+import BookStore from './BookStore';
 
 
 function App() {
   const [count, setCount] = useState(0)
 
+  const actors = ['sharukh khan', 'shakib khan', 'shalman khan']
+  const P=[
+    {name:'Shakib',age:'32',sallary:'250000'},
+    {name:'Tamim',age:'34',sallary:'220000'},
+    {name:'Masrafe',age:'38',sallary:'270000'},
+    {name:'Mustafijur',age:'29',sallary:'251000'}
+  ]
+  const b=[
+    {name:"bangla",price:'220tk'},
+    {name:"math",price:'290tk'},
+    {name:"english",price:'420tk'}
+  ]
+
   return (
     <>
-      <h1>Vite + React</h1>
+    <BookStore stor={b}></BookStore>
+    {
+      P.map(play=><Players player={play}></Players>)
+    }
+      {
+        actors.map(actor => <Actors name={actor}></Actors>)
+      }
+      <Todo></Todo>
       {/* <Todo task='learn react'></Todo> */}
       {/* nicher moto data kthao pathaile obj hisabe paoya jabe ---- access to the data obj start*/}
       <Device name='laptop' price='190k' brand="lenova"></Device>
